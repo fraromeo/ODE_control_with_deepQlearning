@@ -1,1 +1,1 @@
-# ODE_control_with_deepQlearning
+# ODE Control with Deep Q-learning
