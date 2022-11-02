@@ -56,6 +56,8 @@ In this way we managed to reach our goal:
 
 <img width="445" alt="Schermata 2022-11-02 alle 21 48 08" src="https://user-images.githubusercontent.com/64698911/199599480-b2152f6f-585d-4ba8-8c4a-08cf6331cb2a.png">
 
+<img width="445" alt="Schermata 2022-11-02 alle 21 49 56" src="https://user-images.githubusercontent.com/64698911/199599806-7d709588-e54b-4eba-911a-a764e550a6c6.png">
+
 
 We then tried to control two parameters: α and δ. The model is able to find a stable pair of parameters after just a few iterations, even without the introduction of the additional penalization term. The plots of the evolution of the populations and of the parameters are the follwoing: 
 
