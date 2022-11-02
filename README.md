@@ -2,8 +2,7 @@
 
 ## Introduction
 
-The goal of the project is to determine a controlling procedure for the evolution of an Ordinary Differential
-Equation in a Deep Reinforcement Learning Framework, with the particular approach of Deep Q-Learning. Our study case is the Lokta Volterra system of equations, which describes how the number of individuals of a population formed by preys and predators vary due to the interaction between these two species. 
+The goal of the project is to determine a controlling procedure for the evolution of an Ordinary Differential Equation in a Deep Reinforcement Learning Framework, with the particular approach of Deep Q-Learning. Our study case is the Lokta Volterra system of equations, which describes how the number of individuals of a population formed by preys and predators vary due to the interaction between these two species. 
 
 <img width="142" alt="Schermata 2022-11-02 alle 17 53 22" src="https://user-images.githubusercontent.com/64698911/199552125-39faa4ea-f846-438c-8784-2350320744f9.png">
 
@@ -29,7 +28,7 @@ The values for the parameters are the following: α = 0.55, β = 0.028, γ = 0.0
 
 ## Deep Q-Learning
 
-The technique used to reach our goal is Deep Q-learning, a reinforcement learning algorithm that is derived from vanilla Q-learning by replacing the Q function with a neural network. This step is necessary in our framework because the state-action space is continuous, thus cannot be fully represented using a discrete function like in vanilla Q-learning. 
+The main algorithm used to reach our goals is Deep Q-learning, a reinforcement learning technique that is derived from vanilla Q-learning by replacing the Q function with a neural network. This step is necessary in our framework because the state-action space is continuous, thus cannot be fully represented using a discrete function like in vanilla Q-learning. A thorough explanation of how deep Q-learning works can be found in the report of the project.
 
 
 
