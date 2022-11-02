@@ -31,15 +31,11 @@ The values for the parameters are the following: α = 0.55, β = 0.028, γ = 0.0
 The main algorithm used to reach our goals is Deep Q-learning, a reinforcement learning technique that is derived from vanilla Q-learning by replacing the Q function with a neural network. This step is necessary in our framework because the state-action space is continuous, thus cannot be fully represented using a discrete function like in vanilla Q-learning. A thorough explanation about how deep Q-learning works can be found in the report of the project. Let's see the main characteristics of the reinforcement learning environment: 
 
 * We chose as state variables the numerosity of the two populations
-* The actions that the agent can perform in order to modify the state variables consist in varying the parameters of the Lotka-Volterra system of equations in given ranges
-<!---
-PIC of ranges of intervals 
--->
-These intervals are discretized in grids of equally spaced values. The numerosity of the grid changes based on how many parameters the agent is allowed to vary: if only one parameter is free, then the grid consists in 15 points, while if two parameters are free, then for each parameter there are 5 points on the each grid. Each time the agent has to choose an action, he selects one value on the grids.
+* The actions that the agent can perform in order to modify the state variables consist in varying the parameters of the Lotka-Volterra system of equations in given ranges. These intervals are discretized in grids of equally spaced values. The numerosity of the grid changes based on how many parameters the agent is allowed to vary: if only one parameter is free, then the grid consists in 15 points, while if two parameters are free, then for each parameter there are 5 points on the each grid. Each time the agent has to choose an action, he selects one value on the grids.
 * The reward reflects the goal of the agent: keeping the two populations alive. The rewards are the following: 
-1. if one of the two populations becomes extinct, we give a reward of -1000. A population is considered extinct if its numerosity drops below 4 units
-2. if the agent manages to keep the two populations alive for 400 time steps of the Lotka-Volterra system of equation, he obtains a reward of +500
-3. for the other steps, the reward is equal to -1
+    1. if one of the two populations becomes extinct, we give a reward of -1000. A population is considered extinct if its numerosity drops below 4 units
+    2. if the agent manages to keep the two populations alive for 400 time steps of the Lotka-Volterra system of equation, he obtains a reward of +500
+    3. for the other steps, the reward is equal to -1
 
 
 
