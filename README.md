@@ -27,4 +27,5 @@ PIC lynxes and rabbits
 
 The values for the parameters are the following: α = 0.55, β = 0.028, γ = 0.026, δ = 0.84
 
+## Deep Q-Learning
 
