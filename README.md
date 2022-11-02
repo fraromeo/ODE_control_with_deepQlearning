@@ -29,3 +29,9 @@ The values for the parameters are the following: α = 0.55, β = 0.028, γ = 0.0
 
 ## Deep Q-Learning
 
+The technique used to reach our goal is Deep Q-learning, a reinforcement learning algorithm that is derived from vanilla Q-learning by replacing the Q function with a neural network. This step is necessary in our framework because the state-action space is continuous, thus cannot be fully represented using a discrete function like in vanilla Q-learning. 
+
+
+
+
+
