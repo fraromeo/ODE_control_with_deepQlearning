@@ -26,16 +26,43 @@ PIC lynxes and rabbits
 
 The values for the parameters are the following: α = 0.55, β = 0.028, γ = 0.026, δ = 0.84
 
-## Deep Q-Learning
+## Algorithm
 
-The main algorithm used to reach our goals is Deep Q-learning, a reinforcement learning technique that is derived from vanilla Q-learning by replacing the Q function with a neural network. This step is necessary in our framework because the state-action space is continuous, thus cannot be fully represented using a discrete function like in vanilla Q-learning. A thorough explanation about how deep Q-learning works can be found in the report of the project. Let's see the main characteristics of the reinforcement learning environment: 
+The main algorithm used to reach our goals is Deep Q-learning, a reinforcement learning technique that is derived from vanilla Q-learning by replacing the Q function with a neural network. This step is necessary in our framework because the state-action space is continuous, thus cannot be fully represented using a discrete function like in vanilla Q-learning. A thorough explanation about how Q-learning and deep Q-learning work can be found in the report of the project. Let's see the main characteristics of our reinforcement learning environment: 
 
 * We chose as state variables the numerosity of the two populations
-* The actions that the agent can perform in order to modify the state variables consist in varying the parameters of the Lotka-Volterra system of equations in given ranges. These intervals are discretized in grids of equally spaced values. The numerosity of the grid changes based on how many parameters the agent is allowed to vary: if only one parameter is free, then the grid consists in 15 points, while if two parameters are free, then for each parameter there are 5 points on the each grid. Each time the agent has to choose an action, he selects one value on the grids.
+* The actions that the agent can perform in order to modify the state variables consist in varying the parameters of the Lotka-Volterra system of equations by choosing their values on fixed grids. The numerosity of the grid changes based on how many parameters the agent is allowed to vary. Each time the agent has to choose an action, he selects one value on the grids.
 * The reward reflects the goal of the agent: keeping the two populations alive. The rewards are the following: 
     1. if one of the two populations becomes extinct, we give a reward of -1000. A population is considered extinct if its numerosity drops below 4 units
     2. if the agent manages to keep the two populations alive for 400 time steps of the Lotka-Volterra system of equation, he obtains a reward of +500
     3. for the other steps, the reward is equal to -1
+
+The algorithm consists in a training phase of 2000 episodes and a test phase of 200 episode, where an episode coincides with an entire simulation of Lokta-Volterra, until extinction of one of the two population or until the gol is reached. The initial state of the system is initialized randomly from a gaussian distribution. At every iteration, we select an action using an ε-greedy policy. Then, the values of the  parameters are changed accordingly and the Lotka-Volterra system of equation is run for two time step. This procedure will give a new state, according to which the previous state-action pair will receive a reward.
+
+The details about the neural network and some other techniques used in the algorithm are better explained in the report. 
+
+## Results 
+
+
+We started considering only one parameter: α. We obtained the following results: 
+
+<img width="445" alt="Schermata 2022-11-02 alle 21 48 44" src="https://user-images.githubusercontent.com/64698911/199599572-8a773865-6de3-46cc-93d5-fe4d732c3091.png">
+
+
+The evolution of the states is too noisy, does not present any periodic pattern and α does not stabilize, but changes almost at every iteration. This is due to the fact that the model learns to overreact, while we want it to find a stable solution. To solve this issue we modified the reward and added a penalization term
+which depends on the maximum range between the numerousity of the two populations: the greater this range is, the worse the reward. 
+In this way we managed to reach our goal: 
+
+
+<img width="445" alt="Schermata 2022-11-02 alle 21 48 08" src="https://user-images.githubusercontent.com/64698911/199599480-b2152f6f-585d-4ba8-8c4a-08cf6331cb2a.png">
+
+
+We then tried to control two parameters: α and δ. The model is able to find a stable pair of parameters after just a few iterations, even without the introduction of the additional penalization term. The plots of the evolution of the populations and of the parameters are the follwoing: 
+
+
+<img width="433" alt="Schermata 2022-11-02 alle 21 47 41" src="https://user-images.githubusercontent.com/64698911/199599400-edf35dc6-0a85-4685-a2bc-523183170151.png">
+
+
 
 
 
