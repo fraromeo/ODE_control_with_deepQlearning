@@ -4,9 +4,9 @@
 
 The goal of the project is to determine a controlling procedure for the evolution of an Ordinary Differential
 Equation in a Deep Reinforcement Learning Framework, with the particular approach of Deep Q-Learning. Our study case is the Lokta Volterra system of equations, which describes how the number of individuals of a population formed by preys and predators vary due to the interaction between these two species. 
-<!---
+
 <img width="142" alt="Schermata 2022-11-02 alle 17 53 22" src="https://user-images.githubusercontent.com/64698911/199552125-39faa4ea-f846-438c-8784-2350320744f9.png">
--->
+
 The variables x and y represent respectively the number of individuals of the prey and the predator population, while α, β, γ, δ are positive real parameters.
 It is worth noting that the preys are assumed to have infinite food resources at their disposal and thus their reproduction rate is determined only by the parameter α, without any suffering due to scarcity in case of overpopulation. On the other hand, the parameter β determines the predation rate of the prey due to the predator: this is the only case of death for the prey in the system.
 γ represents the growth rate of the predator population, which is entirely defined by its interaction with the prey: notice that the term is similar to the predation rate, but the two coefficients are different. δ represents the natural decay of the predator population, either due to death or emigration.
