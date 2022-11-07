@@ -46,7 +46,8 @@ The details about the neural network and some other techniques used in the algor
 
 We started considering only one parameter: α. We obtained the following results: 
 
-<img width="445" alt="Schermata 2022-11-02 alle 21 48 44" src="https://user-images.githubusercontent.com/64698911/199599572-8a773865-6de3-46cc-93d5-fe4d732c3091.png"><img width="210" alt="Schermata 2022-11-07 alle 17 37 52" src="https://user-images.githubusercontent.com/64698911/200364881-75a4d73c-2f69-4424-a0df-47d696efdac0.png">
+<img width="445" alt="Schermata 2022-11-02 alle 21 48 44" src="https://user-images.githubusercontent.com/64698911/199599572-8a773865-6de3-46cc-93d5-fe4d732c3091.png"> 
+<img width="210" alt="Schermata 2022-11-07 alle 17 37 52" src="https://user-images.githubusercontent.com/64698911/200364881-75a4d73c-2f69-4424-a0df-47d696efdac0.png">
 
 
 
