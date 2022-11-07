@@ -43,7 +43,7 @@ The main algorithm used to reach our goals is Deep Q-learning, a reinforcement l
 
 The algorithm consists in a training phase of 2000 episodes and a test phase of 200 episode, where an episode coincides with an entire simulation of Lokta-Volterra, until extinction of one of the two population or until the gol is reached. The initial state of the system is initialized randomly from a gaussian distribution. At every iteration, we select an action using an ε-greedy policy. Then, the values of the  parameters are changed accordingly and the Lotka-Volterra system of equation is run for two time step. This procedure will give a new state, according to which the previous state-action pair will receive a reward.
 
-The details about the neural network and some other techniques used in the algorithm are better explained in the report. 
+The details about the neural network and some other techniques used in the algorithm are better explained in ```Report.pdf``` 
 
 ## Results 
 
@@ -71,4 +71,12 @@ We then tried to control two parameters: α and δ. The model is able to find a 
 
 We can clearly see from these plots that we are able to keep the two populations alive just changing the values of some parameters. In other words, starting from a random value of numerousity of the two populations, we are able to interfere with the way the two populations interact in order to keep both of them away from extinction. 
 
+## Resources
+- ```Environment_alpha.ipynb``` in ```code``` folder is the Google Colab Notebook containing the Deep Reinforcement Learning algorithm that varies only one parameter (α in our case)  
+- ```Environment_alpha_delta.ipynb``` in ```code``` folder is the Google Colab Notebook containing the Deep Reinforcement Learning algorithm that varies two parameters (α, δ in our case)
+- ```Report.pdf``` is the pdf of the final report of the project. It contains detailed information about every step of the algorithm, a more accurate explanation of how Q-learning and Deep Q-learninng work and possible improvements. 
 
+## Team
+- Davide Carrara [[Github](https://github.com/davidecarrara98)] [[Email](mailto:davide1.carrara@mail.polimi.it)]
+- Francesco Romeo [[Github](https://github.com/fraromeo)] [[Email](mailto:francesco5.romeo@mail.polimi.it)]
+- Daniela Zanotti [[Github](https://github.com/DanielaZanotti)] [[Email](mailto:daniela1.zanotti@mail.polimi.it)]
