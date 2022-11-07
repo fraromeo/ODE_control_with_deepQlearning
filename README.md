@@ -69,6 +69,6 @@ We then tried to control two parameters: α and δ. The model is able to find a 
 <img width="433" alt="Schermata 2022-11-02 alle 21 47 41" src="https://user-images.githubusercontent.com/64698911/199599400-edf35dc6-0a85-4685-a2bc-523183170151.png">
 
 
-
+We can clearly see from these plots that we are able to keep the two populations alive just changing the values of some parameters. In other words, starting from a random value of numerousity of the two populations, we are able to interfere with the way the two populations interact in order to keep both of them away from extinction. 
 
 
