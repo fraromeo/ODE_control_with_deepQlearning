@@ -20,9 +20,9 @@ When considering only one parameter we will modify α, the growth rate of the pr
 
 In order to act in a realistic scenario, reasonable starting values for the four parameters are needed: we will thus refer to the standard case of the two populations of lynxes and snowshoe hares in Hudson Bay in Canada.
 
-<!---
-PIC lynxes and rabbits 
--->
+
+<img width="210" alt="Schermata 2022-11-07 alle 17 35 49" src="https://user-images.githubusercontent.com/64698911/200364440-bad3ce61-f72f-499e-a790-bf5867c9bd2f.png">
+
 
 The values for the parameters are the following: α = 0.55, β = 0.028, γ = 0.026, δ = 0.84
 
@@ -46,7 +46,8 @@ The details about the neural network and some other techniques used in the algor
 
 We started considering only one parameter: α. We obtained the following results: 
 
-<img width="445" alt="Schermata 2022-11-02 alle 21 48 44" src="https://user-images.githubusercontent.com/64698911/199599572-8a773865-6de3-46cc-93d5-fe4d732c3091.png">
+<img width="445" alt="Schermata 2022-11-02 alle 21 48 44" src="https://user-images.githubusercontent.com/64698911/199599572-8a773865-6de3-46cc-93d5-fe4d732c3091.png"><img width="210" alt="Schermata 2022-11-07 alle 17 37 52" src="https://user-images.githubusercontent.com/64698911/200364881-75a4d73c-2f69-4424-a0df-47d696efdac0.png">
+
 
 
 The evolution of the states is too noisy, does not present any periodic pattern and α does not stabilize, but changes almost at every iteration. This is due to the fact that the model learns to overreact, while we want it to find a stable solution. To solve this issue we modified the reward and added a penalization term
