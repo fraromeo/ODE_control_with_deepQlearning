@@ -24,6 +24,10 @@ In order to act in a realistic scenario, reasonable starting values for the four
 <img width="568" alt="Schermata 2022-11-07 alle 17 41 49" src="https://user-images.githubusercontent.com/64698911/200365714-863e4f55-87c3-4701-acb0-346b4c620338.png">
 
 
+
+
+
+
 The values for the parameters are the following: α = 0.55, β = 0.028, γ = 0.026, δ = 0.84
 
 ## Algorithm
