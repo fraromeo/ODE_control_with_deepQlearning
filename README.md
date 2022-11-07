@@ -51,6 +51,12 @@ We started considering only one parameter: α. We obtained the following results
 
 
 
+
+
+
+
+
+
 The evolution of the states is too noisy, does not present any periodic pattern and α does not stabilize, but changes almost at every iteration. This is due to the fact that the model learns to overreact, while we want it to find a stable solution. To solve this issue we modified the reward and added a penalization term
 which depends on the maximum range between the numerousity of the two populations: the greater this range is, the worse the reward. 
 In this way we managed to reach our goal: 
