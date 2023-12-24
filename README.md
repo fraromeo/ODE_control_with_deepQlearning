@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The goal of the project is to define a controlling procedure for the evolution of an Ordinary Differential Equation in a Deep Reinforcement Learning framework, with the particular approach of Deep Q-Learning. Our study case is the Lokta Volterra system of equations, which describes how the number of individuals of a population formed by preys and predators varies due to the interaction between these two species. 
+The goal of the project is to define a controlling procedure for the evolution of an Ordinary Differential Equation in a Deep Reinforcement Learning framework, with the particular approach of Deep Q-Learning. Our study case is the Lotka Volterra system of equations, which describes how the number of individuals of a population formed by preys and predators varies due to the interaction between these two species. 
 
 <img width="142" alt="Schermata 2022-11-02 alle 17 53 22" src="https://user-images.githubusercontent.com/64698911/199552125-39faa4ea-f846-438c-8784-2350320744f9.png">
 
@@ -45,7 +45,7 @@ The numerosity of the grid changes based on how many parameters the agent is all
     2. if the agent manages to keep the two populations alive for 400 time steps of the Lotka-Volterra system of equation, he obtains a reward of +500
     3. for the other steps, the reward is equal to -1
 
-The algorithm consists in a training phase of 2000 episodes and a test phase of 200 episode, where an episode coincides with an entire simulation of Lokta-Volterra, until extinction of one of the two population or until the goal is reached. The initial state of the system is drawn randomly from a gaussian distribution. At every iteration, we select an action using an ε-greedy policy. Then, the values of the parameters are changed accordingly and the Lotka-Volterra system of equation is run for two time steps. This procedure will result in a new state, according to which the previous state-action pair will receive a reward.
+The algorithm consists in a training phase of 2000 episodes and a test phase of 200 episode, where an episode coincides with an entire simulation of Lotka-Volterra, until extinction of one of the two population or until the goal is reached. The initial state of the system is drawn randomly from a gaussian distribution. At every iteration, we select an action using an ε-greedy policy. Then, the values of the parameters are changed accordingly and the Lotka-Volterra system of equation is run for two time steps. This procedure will result in a new state, according to which the previous state-action pair will receive a reward.
 
 The details about the neural network and some other techniques used in the algorithm are better explained in ```Report.pdf``` 
 
